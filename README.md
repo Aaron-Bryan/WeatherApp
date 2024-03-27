@@ -1,10 +1,10 @@
-Hello, Thank you for visiting this repo
-To use the 2D_Shooter.py you must have these libraries installed:
+Hello, Thank you for visiting this repo To use the Weather.py.<br>
+you must have these libraries installed:<br>
 
-tkinter
-requests
-json
-datetime
+tkinter<br>
+requests<br>
+json<br>
+datetime<br>
 
-Ex:
+Ex:<br>
 pip install tkinter
