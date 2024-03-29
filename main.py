@@ -46,4 +46,17 @@ def show_weather():
         feels_like_temperature = int(weather_info["main"]["feels_like"] - 273)
         pressure = weather_info["main"]["pressure"]
         humidity = weather_info["main"]["humidity"]
-        wind_speed = weather_info["main"]["speed"]
+        wind_speed = weather_info["wind"]["speed"]
+
+        estimated_sunrise = weather_info["sys"]["sunrise"]
+        estimated_sunset = weather_info["sys"]["sunset"]
+
+        #sunrise_time =
+        #sunset_time =
+
+        timezone = weather_info["timezone"]
+
+        cloud_formation = weather_info["clouds"]["all"]
+
+        weather_summary = weather_info["weather"][0]["description"]
+
