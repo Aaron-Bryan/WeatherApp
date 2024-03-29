@@ -13,6 +13,8 @@ root.title("Weather App")
 
 loc_value = StringVar()
 
+text_field = Text(root, width=46, height=10)
+
 #Main Function
 def show_weather():
     #API Key
