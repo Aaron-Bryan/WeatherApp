@@ -37,3 +37,5 @@ def show_weather():
 
     if weather_info["cod"] == 200:
         kelvin = 273
+
+    #Get the vlues from the weather values from the weather_info variable.
