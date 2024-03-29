@@ -37,8 +37,9 @@ def show_weather():
 
     if weather_info["cod"] == 200:
 
-    #Get the vlues from the weather values from the weather_info variable.
+        #Get the values from the weather values from the weather_info variable.
 
-    # From kelvin to celsius (C = K - 273.15)
-    temperature = int(weather_info["main"]["temp"] - 273)
-    feels_like_temperature = int(weather_info["main"]["feels_like"] - 273)
+        # From kelvin to celsius (C = K - 273.15)
+        temperature = int(weather_info["main"]["temp"] - 273)
+        feels_like_temperature = int(weather_info["main"]["feels_like"] - 273)
+        pressure = weather_info["main"]["pressure"]
