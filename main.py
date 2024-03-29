@@ -36,7 +36,6 @@ def show_weather():
     text_field.delete("1.0", "end")
 
     #cod = 200 -> Means weather data is successfully fetched
-
     if weather_info["cod"] == 200:
 
         #Get the values from the weather values from the weather_info variable.
