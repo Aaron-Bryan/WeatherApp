@@ -23,3 +23,9 @@ def show_weather():
 
     #URL of the API
     api_url = 'http://api.openweathermap.org/data/2.5/weather?q=' + loc_name + '&appid='+ api_key
+
+    #Get the response from the URL
+    response = requests.get(api_url)
+
+    #Covert the response from json to a readable python format.
+    weather_info = response.json()
