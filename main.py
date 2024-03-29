@@ -29,3 +29,11 @@ def show_weather():
 
     #Covert the response from json to a readable python format.
     weather_info = response.json()
+
+    #Clearing the text field for new outputs
+    text_field.delete("1.0", "end")
+
+    #cod = 200 -> Means weather data is successfully fetched
+
+    if weather_info["cod"] == 200:
+        kelvin = 273
