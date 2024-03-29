@@ -36,6 +36,9 @@ def show_weather():
     #cod = 200 -> Means weather data is successfully fetched
 
     if weather_info["cod"] == 200:
-        kelvin = 273
 
     #Get the vlues from the weather values from the weather_info variable.
+
+    # From kelvin to celsius (C = K - 273.15)
+    temperature = int(weather_info["main"]["temp"] - 273)
+    feels_like_temperature = int(weather_info["main"]["feels_like"] - 273)
