@@ -45,3 +45,5 @@ def show_weather():
         temperature = int(weather_info["main"]["temp"] - 273)
         feels_like_temperature = int(weather_info["main"]["feels_like"] - 273)
         pressure = weather_info["main"]["pressure"]
+        humidity = weather_info["main"]["humidity"]
+        wind_speed = weather_info["main"]["speed"]
