@@ -11,9 +11,10 @@ root.resizable(0, 0)
 
 root.title("Weather App")
 
+#Variables
 loc_value = StringVar()
-
 text_field = Text(root, width=46, height=10)
+location_name = "Test name"
 
 #Main Function
 def show_weather():
@@ -60,12 +61,9 @@ def show_weather():
         weather_description = weather_info["weather"][0]["description"]
 
         #Assign the values in this string format.
-
-        """weather = f"\nWeather of: {city_name}\nTemperature (Celsius): {temp}°\nFeels like in (Celsius): {feels_like_temp}°\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time} and Sunset at {sunset_time}\nCloud: {cloudy}%\nInfo: {description}"
-        else:
-        weather = f"\n\tWeather for '{city_name}' not found!\n\tKindly Enter valid City Name !!""""
-
         weather_summary = f"{location_name}\n Temperature: {temperature} °C \n Pressure: {pressure} hPA \n Humidity: {humidity} \n Estimated Sunrise time: {estimated_sunrise} \n Estimated Sunset time {estimated_sunset} \n Cloud Density: {cloud_density}\n Desc.: {weather_description}"
 
     else:
         weather_summary = f"Weather for {location_name} not found."
+
+    text_field.insert(INSERT, weather_summary)
