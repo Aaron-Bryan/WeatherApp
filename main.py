@@ -72,3 +72,7 @@ def show_weather():
 def time_format(utc):
     local_time = datetime.utcfromtimestamp(utc)
     return local_time.time()
+
+#GUI Part of the code
+location_label = Label(root, text="Enter Location: ", font="Arial 12 bold").pack(padx=5, pady=10)
+location_input = Entry(root, textvariable=loc_value, width=24, font="Arial 12 bold").pack
