@@ -67,3 +67,8 @@ def show_weather():
         weather_summary = f"Weather for {location_name} not found."
 
     text_field.insert(INSERT, weather_summary)
+
+#Function for changing time formats in relation to our location
+def time_format(utc):
+    local_time = datetime.utcfromtimestamp(utc)
+    return local_time.time()
