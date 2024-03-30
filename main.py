@@ -42,7 +42,7 @@ def show_weather():
 
         # From kelvin to celsius (C = K - 273.15)
         temperature = int(weather_info["main"]["temp"] - 273)
-        feels_like_temperature = int(weather_info["main"]["feels_like"] - 273)
+
         pressure = weather_info["main"]["pressure"]
         humidity = weather_info["main"]["humidity"]
         wind_speed = weather_info["wind"]["speed"]
@@ -55,7 +55,17 @@ def show_weather():
 
         timezone = weather_info["timezone"]
 
-        cloud_formation = weather_info["clouds"]["all"]
+        cloud_density = weather_info["clouds"]["all"]
 
-        weather_summary = weather_info["weather"][0]["description"]
+        weather_description = weather_info["weather"][0]["description"]
 
+        #Assign the values in this string format.
+
+        """weather = f"\nWeather of: {city_name}\nTemperature (Celsius): {temp}°\nFeels like in (Celsius): {feels_like_temp}°\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time} and Sunset at {sunset_time}\nCloud: {cloudy}%\nInfo: {description}"
+        else:
+        weather = f"\n\tWeather for '{city_name}' not found!\n\tKindly Enter valid City Name !!""""
+
+        weather_summary = f"{location_name}\n Temperature: {temperature} °C \n Pressure: {pressure} hPA \n Humidity: {humidity} \n Estimated Sunrise time: {estimated_sunrise} \n Estimated Sunset time {estimated_sunset} \n Cloud Density: {cloud_density}\n Desc.: {weather_description}"
+
+    else:
+        weather_summary = f"Weather for {location_name} not found."
