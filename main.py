@@ -49,11 +49,6 @@ def show_weather():
         estimated_sunrise = weather_info["sys"]["sunrise"]
         estimated_sunset = weather_info["sys"]["sunset"]
 
-        #sunrise_time =
-        #sunset_time =
-
-        timezone = weather_info["timezone"]
-
         cloud_density = weather_info["clouds"]["all"]
 
         weather_description = weather_info["weather"][0]["description"]
