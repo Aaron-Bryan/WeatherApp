@@ -13,8 +13,6 @@ root.title("Weather App")
 
 #Variables
 loc_value = StringVar()
-text_field = Text(root, width=46, height=10)
-location_name = "Test name"
 
 #Main Function
 def show_weather():
@@ -61,10 +59,10 @@ def show_weather():
         weather_description = weather_info["weather"][0]["description"]
 
         #Assign the values in this string format.
-        weather_summary = f"{location_name}\n Temperature: {temperature} °C \n Pressure: {pressure} hPA \n Humidity: {humidity} \n Estimated Sunrise time: {estimated_sunrise} \n Estimated Sunset time {estimated_sunset} \n Cloud Density: {cloud_density}\n Desc.: {weather_description}"
+        weather_summary = f"{loc_name}\n Temperature: {temperature} °C \n Pressure: {pressure} hPA \n Humidity: {humidity} \n Estimated Sunrise time: {estimated_sunrise} \n Estimated Sunset time {estimated_sunset} \n Cloud Density: {cloud_density}\n Desc.: {weather_description}"
 
     else:
-        weather_summary = f"Weather for {location_name} not found."
+        weather_summary = f"Weather for {loc_name} not found."
 
     text_field.insert(INSERT, weather_summary)
 
@@ -79,3 +77,9 @@ location_input = Entry(root, textvariable=loc_value, width=24, font="Arial 12 bo
 
 #Button that calls the show_weather() function when pressed
 Button(root, command=show_weather, text="Check Weather", font="Arial 10", bg="lightblue", fg="black", activebackground="teal", padx=5, pady=5).pack(pady=20)
+
+#Output
+weather_output = Label(root, text="The Weather is: ", font='arial 12 bold').pack(pady=10)
+
+text_field = Text(root, width=46, height=10)
+text_field.pack()
