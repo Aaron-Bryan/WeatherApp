@@ -67,14 +67,14 @@ def time_format(utc):
     return local_time.time()
 
 #GUI Part of the code
-location_label = Label(root, text="Enter City Name: ", font="Arial 12 bold").pack(pady=10)
+Location_Label = Label(root, text="Enter Location: ", font="Arial 12 bold").pack(pady=10)
+location_input = Entry(root,textvariable=loc_value, width=24, font="Arial 12 bold").pack()
 
-location_input = Entry(root, textvariable=loc_value, width=24, font="Arial 14 bold").pack()
-
+#Button that calls for the show_weather function
 Button(root, command=show_weather, text="Check Weather", font="Arial 10", bg="lightblue", padx=5, pady=5).pack(pady=20)
 
 #Output
-weather_label = Label(root, text="The Weather is:", font="Arial 12 bold").pack(pady=10)
+weather_label = Label(root, text="The Weather is: ", font="Arial 12 bold").pack(pady=10)
 
 text_field = Text(root, width=46, height=10)
 text_field.pack()
