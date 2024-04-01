@@ -54,7 +54,7 @@ def show_weather():
         #sunrise_time =
         #sunset_time =
 
-        timezone = weather_info["timezone"]
+        timezone = weather_info["timezo ne"]
 
         cloud_density = weather_info["clouds"]["all"]
 
@@ -76,3 +76,6 @@ def time_format(utc):
 #GUI Part of the code
 location_label = Label(root, text="Enter Location: ", font="Arial 12 bold").pack(padx=5, pady=10)
 location_input = Entry(root, textvariable=loc_value, width=24, font="Arial 12 bold").pack
+
+#Button that calls the show_weather() function when pressed
+Button(root, command=show_weather, text="Check Weather", font="Arial 10", bg="lightblue", fg="black", activebackground="teal", padx=5, pady=5).pack(pady=20)
