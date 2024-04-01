@@ -83,3 +83,5 @@ weather_output = Label(root, text="The Weather is: ", font='arial 12 bold').pack
 
 text_field = Text(root, width=46, height=10)
 text_field.pack()
+
+root.mainloop
